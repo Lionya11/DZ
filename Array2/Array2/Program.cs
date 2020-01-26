@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Console1
+namespace Array2
 {
     class Program
     {
@@ -9,27 +9,14 @@ namespace Console1
         {
             List<int> numbers = new List<int>();
             int N = Convert.ToInt32(Console.ReadLine());
-            
 
-            for (int i = 1; i <= N; i+=2)
-            {
+            for (int i = 0; i <= N; i+=2) {
                 numbers.Add(i);
             }
-            for (int i = 1; i >= N; i-=2)
-            {
-                numbers.Add(i);
-            }
-            
 
-            foreach (int value in numbers)
-            {
+            foreach (int value in numbers) {
                 Console.WriteLine(value);
-                
             }
-
-            
-
-
         }
     }
 }
