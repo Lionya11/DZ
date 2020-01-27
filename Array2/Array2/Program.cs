@@ -1,22 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace Array2
+class Program
 {
-    class Program
+
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        int[] a = new int[10] { 1, 2, 3, 4, 5, 6, 8, 8, 9, 8 };
+        bool k = false;
+        int MaxIndex = 1, max = a[1];
+        for (int i = 0; i < a.Length; i++)
         {
-            List<int> numbers = new List<int>();
-            int N = Convert.ToInt32(Console.ReadLine());
+            a[i] = Convert.ToInt32(Console.ReadLine());
+            if (a[i] > a[0] && a[i] < a[9]) { k = true; }
 
-            for (int i = 0; i <= N; i+=2) {
-                numbers.Add(i);
-            }
-
-            foreach (int value in numbers) {
-                Console.WriteLine(value);
-            }
         }
+        if (k)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (a[i] > a[0] && a[i] < a[9] && a[i] > max) { max = a[i]; MaxIndex = i + 1; }
+
+            }
+            Console.WriteLine(MaxIndex);
+
+        }
+
+        else
+            Console.WriteLine(0);
+
+        
     }
 }
